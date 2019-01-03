@@ -145,12 +145,14 @@ export default {
           this.onProgress(e, rawFile);
         },
         onSuccess: res => {
+          console.log('success');
           this.onSuccess(res, rawFile);
-          delete this.reqs[uid];
+          // delete this.reqs[uid];
         },
         onError: err => {
+          console.log('err');
           this.onError(err, rawFile);
-          delete this.reqs[uid];
+          // delete this.reqs[uid];
         }
       };
       const req = this.httpRequest(options);
